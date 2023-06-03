@@ -16,13 +16,63 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Font Awesome -->
+        <link
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+                rel="stylesheet"
+        />
+        <!-- Google Fonts -->
+        <!-- MDB -->
+        <link
+                href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+                rel="stylesheet"
+        />
+        <link
+                href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css"
+                rel="stylesheet"
+        />
+        <style>
+            .card-title, .list-group-item, .dropdown-item, .header-text {
+                font-family: "Poppins", sans-serif
+            }
+            body {
+                font-family: 'Poppins Thin', sans-serif
+            }
+        </style>
+
+        <style>
+            .text-bg-orange {
+                color: #000 !important;
+                background-color: RGBA(255, 165, 0, var(--bs-bg-opacity, 1)) !important;
+            }
+            .list-group-item-orange {
+                color: #842029;
+                background-color: #f8e5d7;
+            }
+            .container-back {
+                position: relative;
+            }
+
+            .containerbackground {
+                margin: 3rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                transform: rotate(300deg);
+                -webkit-transform: rotate(300deg);
+                color: #c6afaf;
+            }
+        </style>
+
     </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
                 <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-gradient">JSRP Tutors</span></a>
+                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-gradient header-text">JSRP Tutors</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
@@ -54,7 +104,10 @@
             </nav>
             <!-- Header-->
             <header class="py-5">
-                <div class="container px-5 pb-5">
+                <div class="container px-5 pb-5 container-back">
+                    <div class="containerbackground">
+                        JSRP Tutors
+                    </div>
                     <div class="row gx-5 align-items-center">
                         <div class="col-xxl-5">
                             <!-- Header text content-->
@@ -68,7 +121,7 @@
                         <div class="col-xxl-7">
                             <!-- Header profile picture-->
                             <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-                                <div class="profile bg-gradient-primary-to-secondary">
+                                <div class="profile hover-shadow bg-gradient-primary-to-secondary">
                                     <!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
                                     <!-- Watch a tutorial on how to do this on YouTube (link)-->
                                     <img class="profile-img" src="assets/profile.png" alt="..." />
@@ -193,7 +246,7 @@
             <!-- About Section-->
             <section class = "bg-light py-5">
                 <div class = "container px-5">
-                    <h1 class="display-1 fw-bolder mb-2 text-center">
+                    <h1 class="display-2 fw-bolder mb-2 text-center">
                         <span class = "text-gradient d-inline">Summer 2023 Academic Camp</span>
                     </h1>
                     <h6 class = "display-5 fw-bold mb-5 text-center"><span class = "text-gradient d-inline">Online and In-Person Classes</span></h6>
@@ -205,8 +258,8 @@
                     <h1 class="display-3 fw-bolder mb-2 text-center"><span class="text-gradient d-inline">What We Teach Through the Year</span></h1>
                     <h6 class = "display-5 fw-bold mb-5 text-center"><span class = "text-gradient d-inline">Grades K-12</span></h6>
                     <div class="row">
-                        <div class="col-sm-4">
-                            <div class="card text-bg-info">
+                        <div class="col-4">
+                            <div class="card text-bg-info hover-shadow">
                                 <div class="card-body">
                                     <h5 class="card-title">Common Core English Curriculum</h5>
                                     <p class="card-text">
@@ -222,8 +275,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="card text-bg-primary">
+                        <div class="col-4">
+                            <div class="card text-bg-primary hover-shadow">
                                 <div class="card-body">
                                     <h5 class="card-title">Math</h5>
                                     <p class="card-text">
@@ -239,8 +292,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="card text-bg-danger">
+                        <div class="col-4">
+                            <div class="card text-bg-danger hover-shadow">
                                 <div class="card-body">
                                     <h5 class="card-title">Computer Science</h5>
                                     <p class="card-text">
@@ -259,8 +312,8 @@
                     </div>
                     <br />
                     <div class = "row">
-                        <div class="col-sm-4">
-                            <div class="card text-bg-warning">
+                        <div class="col-4">
+                            <div class="card text-bg-warning hover-shadow">
                                 <div class="card-body">
                                     <h5 class="card-title">SAT/ACT Foundational Courses</h5>
                                     <p class="card-text">
@@ -276,8 +329,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="card text-bg-success">
+                        <div class="col-4">
+                            <div class="card text-bg-success hover-shadow">
                                 <div class="card-body">
                                     <h5 class="card-title">AP Test Prep</h5>
                                     <p class="card-text">
@@ -293,8 +346,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="card text-bg-orange">
+                        <div class="col-4">
+                            <div class="card text-bg-orange hover-shadow">
                                 <div class="card-body">
                                     <h5 class="card-title">College Preparation</h5>
                                     <p class="card-text">
@@ -342,6 +395,55 @@
                         <div class = "col-sm-1">
 
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section class = "bg-light py-5">
+                <div class = "container px-5">
+                    <h1 class = "display-3 fw-bolder mb-3 align-items-center justify-content-center text-center">
+                        <span class = "text-gradient d-inline">Student Showcase</span>
+                    </h1>
+                    <div id="carouselExample" class="carousel carousel-fade slide w-75 mx-auto" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/sanjana2part.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/arsh.webp" class="d-block w-100"  alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/charu.webp" class="d-block w-100"  alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/dheer.webp" class="d-block w-100"  alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/kapil.webp" class="d-block w-100"  alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/karman.webp" class="d-block w-100"  alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/rishabh.webp" class="d-block w-100"  alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/sneha.webp" class="d-block w-100"  alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/uma.webp" class="d-block w-100"  alt="...">
+                            </div>
+
+
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
             </section>
